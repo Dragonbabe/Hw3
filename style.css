@@ -1,0 +1,14 @@
+.content {
+    margin-top: 10px;
+    margin-bottom:10px;
+    padding: 20px;
+    widows: 100%;
+    background-color: aquamarine;
+    box-sizing: content-box;
+}
+#display{
+    width: 100%;
+}
+
+
+
