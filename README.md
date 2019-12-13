@@ -3,7 +3,7 @@
 # Random Password Generator
 
 This project was interesting and I got to practice JavaScript. I recently learned all about doing prompts and alerts and confirms. And now I got to put that information into practice in this project!
-Deployed link: [Hpme](http://dragonbabe.github.io/Hw3/)
+Deployed link: [Home](http://dragonbabe.github.io/Hw3/)
 
 ## Getting Started
 
