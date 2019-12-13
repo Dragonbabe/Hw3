@@ -61,6 +61,14 @@ function getInputs() {
 
     };
 
+    
+
 }
 
+function generatePassword() {
 
+}
+
+function displayPassword() {
+    
+}
