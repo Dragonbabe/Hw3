@@ -11,115 +11,56 @@ var specialCharList = '!@#$%^&*()_+<>?';
 var numberCharList = '1234567890';
 var lowerCharList = 'abcdefghijklmnopqrstuvqrswxyz';
 var upperCharlist = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-var userInput = 'value';
+var generate = document.getElementById('generate');
+var userChoice;
+generate.addEventListener('click', getInputs);
 
-while (passwordLength !== null) {
-    // prompt user to enter numbers with this criteria
-    passwordLength = prompt('Enter a password length between 8 and 128 characters');
-    passwordLength = parseInt(passwordLength);
-
-    if (isNaN(passwordLength)) {
-        alert("Please enter a valid Number");
-
-    }
-    if (passwordLength < 8 || passwordLength > 128) {
-        alert("Please enter a number between 8 and 128");
-
-    }
-    if (passwordLength >= 8 && passwordLength <= 128) {
-        break;
-    }
-}
-
-while (!wantSpecialChar && !wantNumberChar && !wantLowerChar && !wantUpperChar) {
-
-    wantSpecialChar = confirm('Would you like special characters?');
-
-    wantNumberChar = confirm('Would you like numbers?');
-
-    wantLowerChar = confirm('Would you like lower case characters?');
-
-    wantUpperChar = confirm('Would you like upper case characters?');
-
-    if (!wantSpecialChar && !wantNumberChar && !wantLowerChar && !wantUpperChar) {
-        alert('Please choose one of the four character types.');
-    }
-    // var UserInput = IdLength.value.replace(/[^0-9.]/g, "");
-    //Update input value
-    // IdLength.value = UserInput;
-    // var Results = document.getElementById('results');
-    // var text = "";
-    // var shuffle = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-    //Is input is empty?
-    // if (IdLength !== '') {
-        // for (var i = 0; i < IdLength.value; i++) {
-            // text += shuffle.charAt(Math.floor(Math.random() * shuffle.length));
-        // }
-        // Results.innerHTML = text;
+function getInputs() {
 
 
-        // passwordCriteria = prompt('password criteria: s is for special characters, n is for numbers, l is for lower case characters, u is for upper case characters');
-        // if (passwordCriteria !== null) {
-        //     passwordCriteriaArr = passwordCriteria.split("");
-        // }
+    while (passwordLength !== null) {
+        // prompt user to enter numbers with this criteria
+        passwordLength = prompt('Enter a password length between 8 and 128 characters');
+        passwordLength = parseInt(passwordLength);
 
+        if (isNaN(passwordLength)) {
+            alert("Please enter a valid Number");
 
-        // for (var i = 0; i < passwordCriteriaArr.length; i = i + 1) {
-        //     if (passwordCriteriaArr[i].includes('s')) {
-        //         wantSpecialChar = true;
-        //     }
-        //     if (passwordCriteriaArr[i].includes('n')) {
-        //         wantNumberChar = true;
-        //     }
-        //     if (passwordCriteriaArr[i].includes('l')) {
-        //         wantLowerCase = true;
-        //     }
-        //     if (passwordCriteriaArr[i].includes('u')) {
-        //         wantUpperCase = true;
-        //     }
-        // }
+        }
+        if (passwordLength < 8 || passwordLength > 128) {
+            alert("Please enter a number between 8 and 128");
 
-        // if (wantSpecialChar === true || wantNumberChar === true || wantLowerCase === true || wantUpperCase === true); {
-        //     break
-        // }
-        // let values ="ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$$%&*()_+ ." .split('');
-
-
-
+        }
+        if (passwordLength >= 8 && passwordLength <= 128) {
+            break;
+        }
     }
 
+    // while (!wantSpecialChar && !wantNumberChar && !wantLowerChar && !wantUpperChar) {
 
-    console.log(passwordLength, wantSpecialChar, wantUpperChar, wantLowerChar, wantNumberChar);
+    //     wantSpecialChar = confirm('Would you like special characters?');
+
+    //     wantNumberChar = confirm('Would you like numbers?');
+
+    //     wantLowerChar = confirm('Would you like lower case characters?');
+
+    //     wantUpperChar = confirm('Would you like upper case characters?');
+
+    //     if (!wantSpecialChar && !wantNumberChar && !wantLowerChar && !wantUpperChar) {
+    //         alert('Please choose one of the four character types.');
+    //     }
 
 
-/*
-function generate(){
+    // }
 
-//Possible password values
-let values ="ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$$%&*()_+";
+    userChoice = {
+        wantLowerChar:  confirm('Would you like special characters?'),
+        wantSpecialChar: confirm('Would you like special characters?'),
+        wantNumberChar: confirm('Would you like numbers?'),
+        wantUpperChar: confirm('Would you like upper case characters?'),
 
-let password = "";
-
-//create for loop to choose password characters
-for (var i = 0; i <= complexity; i=i+1){
-    password = password + values.charAt(Math.floor(Math.random() * Math.floor(values.length -1)));
-}
-
-// Add password to textbox/display area
-document.getElementByid('display').values = password;
-
-// add password to previously generated password section
-document.getElementById("lastNums").innerHTML += password + "<br />";
+    };
 
 }
 
-// function to copy password to clip board
-function copyToClipboard(){
 
-    document.getElementById("display").querySelector();
-
-    document.execCommand("copy");
-
-    alert("Password copied to clip board!");
-}
-*/
