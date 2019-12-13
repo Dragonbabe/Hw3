@@ -5,8 +5,8 @@ var passwordCriteria;
 var passwordCriteriaArr;
 var wantSpecialChar = false
 var wantNumberChar = false
-var wantLowerCase = false
-var wantUpperCase = false
+var wantLowerChar = false
+var wantUpperChar = false
 var specialCharList = '!@#$%^&*()_+<>?';
 var numberCharList = '1234567890';
 var lowerCharList = 'abcdefghijklmnopqrstuvqrswxyz';
@@ -29,33 +29,45 @@ while (passwordLength !== null) {
     }
 }
 
-while (passwordCriteria !== null) {
+while (!wantSpecialChar && !wantNumberChar && !wantLowerChar && !wantUpperChar) {
 
-    passwordCriteria = prompt('password criteria: s is for special characters, n is for numbers, l is for lower case characters, u is for upper case characters');
-    if (passwordCriteria !== null) {
-        passwordCriteriaArr = passwordCriteria.split("");
+    wantSpecialChar = confirm('Would you like special characters?');
+
+    wantNumberChar = confirm('Would you like numbers?');
+
+    wantLowerChar = confirm('Would you like lower case characters?');
+
+    wantUpperChar = confirm('Would you like upper case characters?');
+
+    if (!wantSpecialChar && !wantNumberChar && !wantLowerChar && !wantUpperChar) {
+        alert('Please choose one of the four character types.');
     }
+    
+    // passwordCriteria = prompt('password criteria: s is for special characters, n is for numbers, l is for lower case characters, u is for upper case characters');
+    // if (passwordCriteria !== null) {
+    //     passwordCriteriaArr = passwordCriteria.split("");
+    // }
 
 
-    for (var i = 0; i < passwordCriteriaArr.length; i = i + 1) {
-        if (passwordCriteriaArr[i].includes('s')) {
-            wantSpecialChar = true;
-        }
-        if (passwordCriteriaArr[i].includes('n')) {
-            wantNumberChar = true;
-        }
-        if (passwordCriteriaArr[i].includes('l')) {
-            wantLowerCase = true;
-        }
-        if (passwordCriteriaArr[i].includes('u')) {
-            wantUpperCase = true;
-        }
-    }
+    // for (var i = 0; i < passwordCriteriaArr.length; i = i + 1) {
+    //     if (passwordCriteriaArr[i].includes('s')) {
+    //         wantSpecialChar = true;
+    //     }
+    //     if (passwordCriteriaArr[i].includes('n')) {
+    //         wantNumberChar = true;
+    //     }
+    //     if (passwordCriteriaArr[i].includes('l')) {
+    //         wantLowerCase = true;
+    //     }
+    //     if (passwordCriteriaArr[i].includes('u')) {
+    //         wantUpperCase = true;
+    //     }
+    // }
 
-    if (wantSpecialChar === true || wantNumberChar === true || wantLowerCase === true || wantUpperCase === true); {
-        break
-    }
-    let values ="ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$$%&*()_+ ." .split('');
+    // if (wantSpecialChar === true || wantNumberChar === true || wantLowerCase === true || wantUpperCase === true); {
+    //     break
+    // }
+    // let values ="ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$$%&*()_+ ." .split('');
 
 
 
