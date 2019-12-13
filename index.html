@@ -8,16 +8,40 @@
     <title>Random Password Generator</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css" />
-
+    
 </head>
 
 <body>
+    <h1 class="password">Password Generator</h1>
 
-    <div style="width: 320px; margin:0 auto; text-align:center">
-        <button id="generate">Generate</button>
-        <input type="text" placeholder="Your password...">
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-8 col-sm-12 mx.auto">
+                
+                <div class="content">
+                    <h4>Generate a Password</h4>
+                    <br />
+                    <input type="text" id="display">
+                    <br />
+                    <button onclick="generate">Generate</button>
+                    <button onclick="copypassword">Copy to clipboard</button>
+                    <div id="length"></div>
+                </div>
+                
+                <div class="previous_passwords">
+                <b>Previously Generated Passwords</b>
+                <br />
+                <div id="lastNums"></div>
+                </div>
+            
+            </div>
+    
+        </div>
+    
     </div>
-    <script src="script.js"></script>
+    
+    <script src="script.js"></script>  
 </body>
-
 </html>
