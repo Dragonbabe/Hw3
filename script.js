@@ -10,19 +10,21 @@ var wantUpperChar = false
 var specialCharList = '!@#$%^&*()_+<>?';
 var numberCharList = '1234567890';
 var lowerCharList = 'abcdefghijklmnopqrstuvqrswxyz';
-var upperCharlst = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-
+var upperCharlist = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+var userInput = 'value';
 
 while (passwordLength !== null) {
     // prompt user to enter numbers with this criteria
     passwordLength = prompt('Enter a password length between 8 and 128 characters');
     passwordLength = parseInt(passwordLength);
-    
+
     if (isNaN(passwordLength)) {
         alert("Please enter a valid Number");
+
     }
     if (passwordLength < 8 || passwordLength > 128) {
         alert("Please enter a number between 8 and 128");
+
     }
     if (passwordLength >= 8 && passwordLength <= 128) {
         break;
@@ -42,39 +44,52 @@ while (!wantSpecialChar && !wantNumberChar && !wantLowerChar && !wantUpperChar) 
     if (!wantSpecialChar && !wantNumberChar && !wantLowerChar && !wantUpperChar) {
         alert('Please choose one of the four character types.');
     }
-    
-    // passwordCriteria = prompt('password criteria: s is for special characters, n is for numbers, l is for lower case characters, u is for upper case characters');
-    // if (passwordCriteria !== null) {
-    //     passwordCriteriaArr = passwordCriteria.split("");
-    // }
+    // var UserInput = IdLength.value.replace(/[^0-9.]/g, "");
+    //Update input value
+    // IdLength.value = UserInput;
+    // var Results = document.getElementById('results');
+    // var text = "";
+    // var shuffle = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    //Is input is empty?
+    // if (IdLength !== '') {
+        // for (var i = 0; i < IdLength.value; i++) {
+            // text += shuffle.charAt(Math.floor(Math.random() * shuffle.length));
+        // }
+        // Results.innerHTML = text;
 
 
-    // for (var i = 0; i < passwordCriteriaArr.length; i = i + 1) {
-    //     if (passwordCriteriaArr[i].includes('s')) {
-    //         wantSpecialChar = true;
-    //     }
-    //     if (passwordCriteriaArr[i].includes('n')) {
-    //         wantNumberChar = true;
-    //     }
-    //     if (passwordCriteriaArr[i].includes('l')) {
-    //         wantLowerCase = true;
-    //     }
-    //     if (passwordCriteriaArr[i].includes('u')) {
-    //         wantUpperCase = true;
-    //     }
-    // }
-
-    // if (wantSpecialChar === true || wantNumberChar === true || wantLowerCase === true || wantUpperCase === true); {
-    //     break
-    // }
-    // let values ="ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$$%&*()_+ ." .split('');
+        // passwordCriteria = prompt('password criteria: s is for special characters, n is for numbers, l is for lower case characters, u is for upper case characters');
+        // if (passwordCriteria !== null) {
+        //     passwordCriteriaArr = passwordCriteria.split("");
+        // }
 
 
+        // for (var i = 0; i < passwordCriteriaArr.length; i = i + 1) {
+        //     if (passwordCriteriaArr[i].includes('s')) {
+        //         wantSpecialChar = true;
+        //     }
+        //     if (passwordCriteriaArr[i].includes('n')) {
+        //         wantNumberChar = true;
+        //     }
+        //     if (passwordCriteriaArr[i].includes('l')) {
+        //         wantLowerCase = true;
+        //     }
+        //     if (passwordCriteriaArr[i].includes('u')) {
+        //         wantUpperCase = true;
+        //     }
+        // }
 
-}
+        // if (wantSpecialChar === true || wantNumberChar === true || wantLowerCase === true || wantUpperCase === true); {
+        //     break
+        // }
+        // let values ="ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$$%&*()_+ ." .split('');
 
 
 
+    }
+
+
+    console.log(passwordLength, wantSpecialChar, wantUpperChar, wantLowerChar, wantNumberChar);
 
 
 /*
@@ -108,4 +123,3 @@ function copyToClipboard(){
     alert("Password copied to clip board!");
 }
 */
- 
