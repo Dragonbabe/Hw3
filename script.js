@@ -36,23 +36,7 @@ function getInputs() {
         }
     }
 
-    // while (!wantSpecialChar && !wantNumberChar && !wantLowerChar && !wantUpperChar) {
-
-    //     wantSpecialChar = confirm('Would you like special characters?');
-
-    //     wantNumberChar = confirm('Would you like numbers?');
-
-    //     wantLowerChar = confirm('Would you like lower case characters?');
-
-    //     wantUpperChar = confirm('Would you like upper case characters?');
-
-    //     if (!wantSpecialChar && !wantNumberChar && !wantLowerChar && !wantUpperChar) {
-    //         alert('Please choose one of the four character types.');
-    //     }
-
-
-    // }
-
+    
     userChoice = {
         wantLowerChar:  confirm('Would you like special characters?'),
         wantSpecialChar: confirm('Would you like special characters?'),
