@@ -36,9 +36,9 @@ function getInputs() {
         }
     }
 
-    
+
     userChoice = {
-        wantLowerChar:  confirm('Would you like lower case characters?'),
+        wantLowerChar: confirm('Would you like lower case characters?'),
         wantSpecialChar: confirm('Would you like special characters?'),
         wantNumberChar: confirm('Would you like numbers?'),
         wantUpperChar: confirm('Would you like upper case characters?'),
@@ -51,15 +51,15 @@ function getInputs() {
 
 
 function generatePassword() {
-    console.log("User",userChoice, "\n Password Length", passwordLength)
-     
-    if(userChoice.wantLowerChar){
+    console.log("User", userChoice, "\n Password Length", passwordLength)
+
+    if (userChoice.wantLowerChar) {
 
 
-        
+
     }
 }
 
 function displayPassword() {
-    
+
 }
